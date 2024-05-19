@@ -28,6 +28,18 @@ a {
     padding: 2em;
 }
 
+.form-container {
+    margin: 1em;
+    width: fit-content;
+    padding: 1.5em;
+    border: 1px solid gray;
+    background-color: #FFFFFF66;
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .vizitka {
     width: 36em;
     height: 16em;
@@ -78,4 +90,11 @@ a {
     border: 1px solid gray;
     margin: 1em;
     box-shadow: 5px 5px 10px black;
+}
+
+.vizitka--nova {
+    background-color: #FFFFFF66;
+    border: 3px dotted white;
+    justify-content: center;
+    align-items: center;
 }

@@ -2,13 +2,7 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>Vizitkovník</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
+    [#include "_common/head.ftlh"]
 </head>
 <body>
 <div class="detail">
@@ -34,8 +28,14 @@
         </div>
     </div>
 
+    <form method="post" action="/delete-card" class="d-inline">
+        <input type="hidden" name="id" value="${id}"/>
+        <button type="submit" class="btn btn-secondary">Smazat vizitku</button>
+    </form>
+
     <div class="mapa">
-        <iframe style="border:none" src="https://frame.mapy.cz/?q=${vizitky.celaAdresa?url}" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe style="border:none" src="https://frame.mapy.cz/?q=${vizitky.celaAdresa?url("UTF-8")}" width="100%" height="100%"
+                frameborder="0"></iframe>
     </div>
 
 </div>
